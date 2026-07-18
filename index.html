@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Situação de Aprendizagem - Assistente Virtual com IA</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        header {
+
+            background: linear-gradient(135deg, #0d6efd, #004aad);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: .95;
+        }
+
+        .container {
+
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+
+        }
+
+        .card {
+
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+        }
+
+        h2 {
+
+            color: #0d6efd;
+            margin: 25px 0 15px;
+
+        }
+
+        h3 {
+
+            color: #004aad;
+            margin: 20px 0 10px;
+
+        }
+
+        ul {
+
+            margin-left: 25px;
+            margin-bottom: 20px;
+
+        }
+
+        li {
+
+            margin: 8px 0;
+
+        }
+
+        .code {
+
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 25px;
+            border-radius: 10px;
+            overflow: auto;
+            margin: 20px 0;
+            font-family: Consolas;
+            line-height: 1.7;
+        }
+
+        .code p {
+            margin-bottom: 14px;
+        }
+
+        .code p:last-child {
+            margin-bottom: 0;
+        }
+
+        .code .label {
+            display: block;
+            color: #7CFC00;
+            font-weight: 600;
+            margin: 16px 0 8px;
+        }
+
+        .code ul {
+            margin: 0 0 14px 22px;
+        }
+
+        .code li {
+            margin: 4px 0;
+        }
+
+        .code li::marker {
+            color: #7CFC00;
+        }
+
+        .alert {
+
+            background: #fff8e1;
+            border-left: 5px solid orange;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+
+        }
+
+        .download {
+
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+
+        }
+
+        .btn {
+
+            text-decoration: none;
+            background: #0d6efd;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            transition: .3s;
+
+        }
+
+        .btn:hover {
+
+            background: #004aad;
+
+        }
+
+        footer {
+
+            text-align: center;
+            padding: 30px;
+            color: #777;
+
+        }
+
+        .badge {
+
+            display: inline-block;
+            background: #0d6efd;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        section {
+
+            margin-bottom: 35px;
+
+        }
+
+        table {
+
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+
+        }
+
+        table th {
+
+            background: #0d6efd;
+            color: white;
+            padding: 12px;
+
+        }
+
+        table td {
+
+            padding: 12px;
+            border: 1px solid #ddd;
+
+        }
+
+        @media(max-width:700px) {
+
+            header h1 {
+
+                font-size: 1.7rem;
+
+            }
+
+            .card {
+
+                padding: 20px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Situação de Aprendizagem</h1>
+
+        <p>Projeto Final — Assistente Virtual com IA</p>
+
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="badge">
+                Projeto Final
+            </div>
+
+            <section>
+
+                <h2>🎯 Objetivo</h2>
+
+                <p>
+
+                    Neste projeto você desenvolverá um <strong>Assistente Virtual Inteligente</strong> utilizando a API
+                    da OpenAI.
+
+                    O sistema deverá possuir um front-end desenvolvido em HTML, CSS e JavaScript, comunicando-se com uma
+                    API criada em Node.js responsável por acessar a OpenAI.
+
+                </p>
+
+                <div class="alert">
+
+                    <strong>Importante:</strong> Não será utilizado banco de dados neste projeto.
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>🛠 Tecnologias Obrigatórias</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Front-end</th>
+                        <th>Back-end</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+
+                            <ul>
+
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>Fetch API</li>
+
+                            </ul>
+
+                        </td>
+
+                        <td>
+
+                            <ul>
+
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>API da OpenAI</li>
+
+                            </ul>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section>
+
+                <h2>🏢 Cenário</h2>
+
+                <p>
+
+                    A empresa fictícia <strong>Tech Solutions</strong> deseja disponibilizar um assistente virtual para
+                    responder dúvidas de clientes sobre produtos e serviços.
+
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>✅ Funcionalidades Obrigatórias</h2>
+
+                <h3>1. Interface do Chat</h3>
+
+                <ul>
+
+                    <li>Área de mensagens</li>
+                    <li>Campo de digitação</li>
+                    <li>Botão Enviar</li>
+                    <li>Botão Nova Conversa</li>
+
+                </ul>
+
+                <h3>2. Envio de Mensagens</h3>
+
+                <ul>
+
+                    <li>Capturar mensagem digitada</li>
+                    <li>Enviar utilizando Fetch</li>
+                    <li>Exibir resposta da IA</li>
+
+                </ul>
+
+                <h3>3. Histórico</h3>
+
+                <p>As mensagens devem permanecer armazenadas durante toda a conversa.</p>
+
+                <div class="code">
+
+                    let messages = [];
+
+                </div>
+
+                <h3>4. Nova Conversa</h3>
+
+                <ul>
+
+                    <li>Limpar mensagens</li>
+                    <li>Reiniciar histórico</li>
+
+                </ul>
+
+                <h3>6. Indicador de Carregamento</h3>
+
+                <ul>
+
+                    <li>Pensando...</li>
+                    <li>Carregando...</li>
+                    <li>Spinner</li>
+
+                </ul>
+
+                <h3>7. Tratamento de Erros</h3>
+
+                <p>
+
+                    Exibir mensagem amigável caso ocorra erro na comunicação com a API.
+
+                </p>
+
+                <h3>8. Organização Visual</h3>
+
+                <ul>
+
+                    <li>Diferenciar mensagens do usuário</li>
+                    <li>Diferenciar mensagens da IA</li>
+
+                </ul>
+
+            </section>
+
+            <section>
+
+                <h2>🧠 Prompt do Sistema</h2>
+
+                <p>
+                    O <strong>System Prompt</strong> define o comportamento da IA durante toda a conversa.
+                    Antes de enviar as mensagens para a OpenAI, sua API deverá incluir um prompt semelhante aos exemplos
+                    abaixo.
+                </p>
+
+                <div class="alert">
+                    <strong>Importante:</strong> Escolha <strong>apenas um</strong> dos exemplos abaixo ou crie um
+                    cenário próprio com características semelhantes.
+                </div>
+
+                <h3>Exemplo 1 — Tech Solutions</h3>
+
+                <div class="code">
+
+                    <p>
+                        Você é um assistente virtual da empresa <strong>Tech Solutions</strong>, especializada em
+                        soluções de tecnologia para pequenas e médias empresas.
+                    </p>
+
+                    <p>
+                        Seu objetivo é atender clientes de forma educada, profissional e objetiva, respondendo
+                        perguntas relacionadas aos produtos, serviços, planos, suporte técnico e formas de contato da
+                        empresa.
+                    </p>
+
+                    <span class="label">Produtos disponíveis:</span>
+                    <ul>
+                        <li>Plano Basic</li>
+                        <li>Plano Pro</li>
+                        <li>Plano Enterprise</li>
+                    </ul>
+
+                    <span class="label">Serviços oferecidos:</span>
+                    <ul>
+                        <li>Desenvolvimento de software</li>
+                        <li>Consultoria em TI</li>
+                        <li>Infraestrutura em nuvem</li>
+                        <li>Suporte técnico</li>
+                    </ul>
+
+                    <span class="label">Horário de atendimento:</span>
+                    <p>Segunda a sexta-feira, das 08h às 18h.</p>
+
+                    <span class="label">Tom de voz:</span>
+                    <p>Cordial, profissional e direto, evitando termos técnicos complexos.</p>
+
+                    <p>
+                        Caso o usuário pergunte sobre assuntos que não estejam relacionados à empresa ou aos seus
+                        serviços, informe educadamente que você foi desenvolvido apenas para auxiliar clientes da
+                        Tech Solutions.
+                    </p>
+
+                    <p>
+                        Sempre que possível, incentive o cliente a contratar um dos planos ou entrar em contato com a
+                        equipe comercial para obter mais informações.
+                    </p>
+
+                    <p>
+                        Nunca invente informações. Caso não saiba responder, informe que o assunto deve ser tratado
+                        pelo atendimento humano.
+                    </p>
+
+                </div>
+
+                <h3>Exemplo 2 — Clínica Vida Plena</h3>
+
+                <div class="code">
+
+                    <p>
+                        Você é um assistente virtual da <strong>Clínica Vida Plena</strong>.
+                    </p>
+
+                    <p>
+                        Seu objetivo é auxiliar pacientes com informações sobre consultas, especialidades médicas,
+                        horários de atendimento e exames realizados pela clínica.
+                    </p>
+
+                    <span class="label">Especialidades disponíveis:</span>
+                    <ul>
+                        <li>Clínica Geral</li>
+                        <li>Pediatria</li>
+                        <li>Cardiologia</li>
+                        <li>Dermatologia</li>
+                        <li>Ortopedia</li>
+                    </ul>
+
+                    <span class="label">Horário de funcionamento:</span>
+                    <p>Segunda a sexta-feira, das 07h às 19h. Sábado, das 08h às 12h.</p>
+
+                    <span class="label">Você pode informar:</span>
+                    <ul>
+                        <li>Como agendar consultas</li>
+                        <li>Quais especialidades estão disponíveis</li>
+                        <li>Horários de atendimento</li>
+                        <li>Documentos necessários para consultas</li>
+                    </ul>
+
+                    <span class="label">Tom de voz:</span>
+                    <p>Acolhedor e tranquilizador, transmitindo confiança e cuidado ao paciente.</p>
+
+                    <p>
+                        Você não deve fornecer diagnósticos médicos, prescrever medicamentos ou substituir a
+                        orientação de um profissional da saúde.
+                    </p>
+
+                    <p>
+                        Caso o usuário faça perguntas médicas complexas ou relate sintomas, informe educadamente que
+                        apenas um médico pode realizar uma avaliação adequada e oriente-o a agendar uma consulta.
+                    </p>
+
+                    <p>
+                        Se a pergunta estiver fora do contexto da clínica, informe que você foi desenvolvido
+                        exclusivamente para auxiliar pacientes da Clínica Vida Plena.
+                    </p>
+
+                </div>
+
+                <h3>Exemplo 3 — Gamer World</h3>
+
+                <div class="code">
+
+                    <p>
+                        Você é um assistente virtual da loja <strong>Gamer World</strong>, especializada na venda de
+                        computadores gamers, notebooks, periféricos e acessórios.
+                    </p>
+
+                    <p>
+                        Seu objetivo é ajudar clientes a escolher produtos e esclarecer dúvidas sobre compras.
+                    </p>
+
+                    <span class="label">Produtos vendidos:</span>
+                    <ul>
+                        <li>Computadores Gamer</li>
+                        <li>Notebooks</li>
+                        <li>Monitores</li>
+                        <li>Teclados Mecânicos</li>
+                        <li>Mouses Gamer</li>
+                        <li>Headsets</li>
+                        <li>Cadeiras Gamer</li>
+                    </ul>
+
+                    <span class="label">Você pode responder perguntas sobre:</span>
+                    <ul>
+                        <li>Produtos disponíveis</li>
+                        <li>Especificações técnicas</li>
+                        <li>Formas de pagamento</li>
+                        <li>Garantia</li>
+                        <li>Frete</li>
+                        <li>Promoções</li>
+                    </ul>
+
+                    <span class="label">Tom de voz:</span>
+                    <p>Descontraído e entusiasmado, usando linguagem próxima do universo gamer.</p>
+
+                    <p>
+                        Sempre seja cordial e procure recomendar produtos de acordo com a necessidade do cliente.
+                    </p>
+
+                    <p>
+                        Caso o usuário faça perguntas que não estejam relacionadas à loja ou aos produtos
+                        comercializados, informe educadamente que você pode responder apenas questões referentes à
+                        Gamer World.
+                    </p>
+
+                    <p>
+                        Nunca invente preços, estoques ou promoções. Quando não possuir determinada informação,
+                        informe que o cliente deve consultar a equipe de vendas.
+                    </p>
+
+                </div>
+
+                <div class="alert">
+
+                    <strong>Dica:</strong> Você também pode criar seu próprio cenário (escola, restaurante, academia,
+                    pet shop, imobiliária, agência de viagens, biblioteca, entre outros), desde que o assistente possua
+                    um contexto bem definido e responda apenas sobre os assuntos relacionados ao negócio escolhido.
+
+                </div>
+
+            </section>
+            <section>
+
+                <h2>🌐 API</h2>
+
+                <h3>POST /chat</h3>
+
+                <p><strong>Entrada</strong></p>
+
+                <div class="code">
+
+                    {
+                    "mensagem":"Oi"
+                    }
+
+                </div>
+
+                <p><strong>Saída</strong></p>
+
+                <div class="code">
+
+                    {
+                    "response":"Olá! Como posso ajudá-lo hoje?"
+                    }
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>🔄 Fluxo Esperado</h2>
+
+                <ol style="margin-left:25px; line-height:2;">
+
+                    <li>Usuário digita uma mensagem.</li>
+
+                    <li>JavaScript envia para API utilizando Fetch.</li>
+
+                    <li>A API adiciona o Prompt do Sistema.</li>
+
+                    <li>A API envia a conversa para a OpenAI.</li>
+
+                    <li>A OpenAI retorna a resposta.</li>
+
+                    <li>A API devolve a resposta.</li>
+
+                    <li>Front-end exibe a resposta.</li>
+
+                </ol>
+
+            </section>
+
+            <section>
+
+                <h2>⭐ Funcionalidades Extras (Bônus)</h2>
+
+                <ul>
+
+                    <li>Documentação da API em um README.md</li>
+                    
+                    <li>Modo Escuro</li>
+
+                    <li>Enviar com Enter</li>
+
+                    <li>Copiar respostas</li>
+
+                    <li>Limpar conversa</li>
+
+                    <li>Contador de mensagens</li>
+
+                    <li>Horário das mensagens</li>
+
+                    <li>Scroll automático</li>
+
+                    <li>Markdown</li>
+
+                    <li>LocalStorage</li>
+
+                </ul>
+
+            </section>
+
+            <section>
+
+                <h2>📧 Entrega</h2>
+
+                <ul>
+
+                    <li>Código do Front-end</li>
+
+                    <li>Código da API em Node.js</li>
+
+                    <li>Enviar para: <strong>jefferson.lopes@sp.senai.br</strong></li>
+
+                </ul>
+
+            </section>
+
+            <div class="download">
+
+                <a href="#" class="btn">📄 Baixar PDF</a>
+
+                <a href="#" class="btn">💻 Código Base</a>
+
+                <a href="#" class="btn">📚 Material de Apoio</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        Curso IACHAT • SENAI • Situação de Aprendizagem
+
+    </footer>
+
+</body>
+
+</html>
