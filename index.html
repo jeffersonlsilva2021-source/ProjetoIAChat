@@ -28,7 +28,23 @@
             background: linear-gradient(135deg, #0d6efd, #004aad);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
+            position: relative;
+
+        }
+
+        .logo {
+
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 40px;
+            width: auto;
+            background: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
 
         }
 
@@ -40,6 +56,50 @@
         header p {
             font-size: 1.1rem;
             opacity: .95;
+        }
+
+        .navbar {
+
+            background: #004aad;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+
+        }
+
+        .nav-container {
+
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .navbar a {
+
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            font-size: .9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background .2s;
+
+        }
+
+        .navbar a:hover {
+
+            background: rgba(255, 255, 255, .15);
+
+        }
+
+        section {
+
+            scroll-margin-top: 60px;
+
         }
 
         .container {
@@ -223,6 +283,22 @@
 
             }
 
+            .nav-container {
+
+                justify-content: flex-start;
+                overflow-x: auto;
+
+            }
+
+            .logo {
+
+                position: static;
+                transform: none;
+                display: block;
+                margin: 0 auto 15px;
+
+            }
+
         }
     </style>
 
@@ -232,11 +308,26 @@
 
     <header>
 
-        <h1>Situação de Aprendizagem</h1>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/SENAI_S%C3%A3o_Paulo_logo.png" alt="Logo SENAI São Paulo">
 
+        <h1>Situação de Aprendizagem</h1>
         <p>Projeto Final — Assistente Virtual com IA</p>
 
     </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#objetivo">Objetivo</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#cenario">Cenário</a>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#prompt">Prompt</a>
+            <a href="#api">API</a>
+            <a href="#fluxo">Fluxo</a>
+            <a href="#bonus">Bônus</a>
+            <a href="#entrega">Entrega</a>
+        </div>
+    </nav>
 
     <div class="container">
 
@@ -246,7 +337,7 @@
                 Projeto Final
             </div>
 
-            <section>
+            <section id="objetivo">
 
                 <h2>🎯 Objetivo</h2>
 
@@ -268,7 +359,7 @@
 
             </section>
 
-            <section>
+            <section id="tecnologias">
 
                 <h2>🛠 Tecnologias Obrigatórias</h2>
 
@@ -311,7 +402,7 @@
 
             </section>
 
-            <section>
+            <section id="cenario">
 
                 <h2>🏢 Cenário</h2>
 
@@ -324,7 +415,7 @@
 
             </section>
 
-            <section>
+            <section id="funcionalidades">
 
                 <h2>✅ Funcionalidades Obrigatórias</h2>
 
@@ -397,7 +488,7 @@
 
             </section>
 
-            <section>
+            <section id="prompt">
 
                 <h2>🧠 Prompt do Sistema</h2>
 
@@ -582,7 +673,7 @@
                 </div>
 
             </section>
-            <section>
+            <section id="api">
 
                 <h2>🌐 API</h2>
 
@@ -610,7 +701,7 @@
 
             </section>
 
-            <section>
+            <section id="fluxo">
 
                 <h2>🔄 Fluxo Esperado</h2>
 
@@ -634,7 +725,7 @@
 
             </section>
 
-            <section>
+            <section id="bonus">
 
                 <h2>⭐ Funcionalidades Extras (Bônus)</h2>
 
@@ -664,7 +755,7 @@
 
             </section>
 
-            <section>
+            <section id="entrega">
 
                 <h2>📧 Entrega</h2>
 
